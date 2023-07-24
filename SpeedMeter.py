@@ -141,9 +141,9 @@ def print_7seg(num):
     print("                 " * digit + "cm/s")
 
 
-file_name = "sample.csv"
+number = int(input("Which sample do you use? (1-9): "))
+file_name = "sample_" + str(number) + ".csv"
 position_list = read_file(file_name)
-
 
 for i in range(len(position_list)-1):
     unit = 1
