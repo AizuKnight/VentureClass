@@ -1,4 +1,4 @@
-# Team Development (G1)
+# Implemented a speed meter
 
 # Describe how to retrieve data later
 
