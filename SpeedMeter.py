@@ -1,4 +1,5 @@
 # Implemented a speed meter
+# Assumed that data was taken every second
 
 # Describe how to retrieve data later
 
@@ -137,7 +138,7 @@ def print_7seg(num):
         digit = 1
         for line in range(9):
             print(numbers[num][line])
-    print("                 " * digit + "m/s")
+    print("                 " * digit + "cm/s")
 
 
 file_name = "sample.csv"
@@ -145,7 +146,7 @@ position_list = read_file(file_name)
 
 
 for i in range(len(position_list)-1):
-    unit = 0.2
+    unit = 1
     velocity = math.dist(position_list[i], position_list[i+1]) / unit
     print_7seg(round(velocity))
     time.sleep(unit)
